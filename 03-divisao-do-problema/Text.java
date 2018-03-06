@@ -33,6 +33,19 @@ class Text {
     return r;
   }
 
+  static String substr(String s, int inicio, int qtd) {
+
+    // caso excepcional: inicio negativo
+    if (inicio < 0) inicio = s.length() + inicio;
+
+    String r = "";
+    for (int i = inicio; i < inicio + qtd; i++) {
+      r += s.charAt(i);
+    }
+
+    return r;
+  }
+
 
 
 
