@@ -1,11 +1,5 @@
 class Text {
 
-  static String pad(String s, int n, char c, char d) {
-    if (d == 'r') return padRight(s, n, c);
-    if (d == 'l') return padLeft(s, n, c);
-    return s;
-  }
-
   static String padLeft(String s, int n, char c) {
     return repeat(c, n - s.length()) + s;
   }
