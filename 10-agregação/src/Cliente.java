@@ -45,7 +45,8 @@ public class Cliente {
 
 	public void removeTelefone(Telefone t) {
 		for (int i = 0; i < telefones.length; i++) {
-			if (telefones[i] == t) {
+			if (telefones[i] != null 
+					&& telefones[i].equals(t)) {
 				telefones[i] = null;
 			}			
 		}
@@ -62,3 +63,22 @@ public class Cliente {
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

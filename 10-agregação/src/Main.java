@@ -1,5 +1,12 @@
 public class Main {
 	public static void main(String[] args) {
+		
+		System.out.println(
+		  new TelefoneCelular("33", "8877222") == new TelefoneCelular("33", "8877222"));
+		System.out.println(
+				  new TelefoneCelular("33", "8877222").equals(new TelefoneCelular("33", "8877222")));
+		System.out.println(new TelefoneCelular("8877").equals(new TelefoneCelular("8877")));
+		
 		Cliente cli1 = new Cliente("Marcio");
 		System.out.println(cli1);
 		System.out.println(cli1.getNome());
@@ -9,8 +16,11 @@ public class Main {
 		
 		cli1.addTelefone(t1);
 		cli1.addTelefone(t2);
+		
+		// aqui está:
 		cli1.addTelefone(new TelefoneCelular("988776622"));
 		
+		System.out.println("\nTelefones inicialmente: ");
 		Telefone[] tels = cli1.getTelefones();
 		System.out.println(tels.length);
 		for (Telefone t : tels) { // for each
@@ -18,10 +28,16 @@ public class Main {
 		}
 		
 		cli1.removeTelefone(t1);
-		System.out.println("Telefone restantes:");
+		cli1.removeTelefone(new TelefoneCelular("988776622"));
+		
+		System.out.println("\nTelefone restantes:");
 		for (Telefone t : cli1.getTelefones()) {
 			System.out.println(t);
 		}
+		
+
+		
+		// cli1.removeTelefone(cli1.getTelefones()[1]);
 		
 		// System.out.println(t1);
 		// System.out.println(t2);

@@ -8,7 +8,7 @@ public class TelefoneCelular extends Telefone {
 	public TelefoneCelular(String numero) {
 		super(numero);
 	}
-
+	
 	@Override
 	public String getTipo() {		
 		return "Celular";
