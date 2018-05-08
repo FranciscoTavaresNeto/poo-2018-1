@@ -4,7 +4,7 @@
 //     + abstrato: menos detalhes
 //     + concreto: mais detalhes (mais específico)
 
-class ArCondicionado {
+public class ArCondicionado {
   // final significa constante
   // definida UMA VEZ!
   final String marca; // atributo marca
